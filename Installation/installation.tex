@@ -16,9 +16,9 @@
 
 \section{Introduction}
 Deep Reinforcement Learning (also called RL) is a huge step towards the creation of an universal artificial intelligence.\\ %TODO ADD SOME SPICE
-This guide will lead the reader through the setup process for the beginner tutorial "Deep Reinforcement Learning". 
+This guide will lead the reader through the setup process for the beginner tutorial "Deep Reinforcement Learning". It is also possible to use this as a base for different 
 \paragraph{Prerequisites}
-It is recommended that a reader already acquired some basic knowledge about programming with Python and is familiar with basic deep learning concepts like Un-/Supervised Learning. It is also useful to be able to perform some basic linux commands, as we will use them later to install some additional packages.
+It is recommended that a reader already acquired some basic knowledge about programming with Python and is familiar with basic deep learning concepts like Un-/Supervised Learning or at least with basic concept of AI \footnote{Artificial Intelligence}. It is also useful to be able to perform some basic linux commands, as we will use them later to install some additional packages.
 \paragraph{Outlook}
 The user will get to know basic concepts of RL with the help of:
 \begin{description}
@@ -26,6 +26,8 @@ The user will get to know basic concepts of RL with the help of:
 	\item[Pip] A package installer for Python, which will download and install packages for us from a repository.
 	\item[Jupyter Lab] Enables execution of Python code inside a document, used to teach theory and implementation. 
 	\item[Google Cloud] Cloud based processing power for training of different implementations of RL. Delivers a linux environment with preinstalled utilities for deep learning including different libraries for Python, Python itself and Jupyter Lab.
+	\item[Keras] Framework, which delivers different premade algorithms.
+	\item[OpenAiGym] A framework to train and evaluate different AI-based algorithms
 \end{description}  
 \section{Installation}
 \subsection{Google Cloud}
@@ -35,14 +37,28 @@ It is also possible to use this tutorial locally. You will have to prepare a Jup
 To get started in the most simple way, we will use the Google "Deep Learning VM" template to create our environment. It can be found at \url{https://cloud.google.com/deep-learning-vm} or alternatively you can search for "Deep Learning VM" in the Google Cloud marketplace, as shown in picture \ref{fig_marketplaceSearch}.
 \begin{figure}[H]
 	\centerline{\includegraphics[width=\textwidth]{img/marketplaceSearch}}
-	\caption{Searching for "Deep Learning VM"}
+	\caption{Searching for ''Deep Learning VM''}
 	\label{fig_marketplaceSearch}
 \end{figure}
 \noindent After you choose the virtual machine, you will be provided with some additional information. Choose ''start in compute engine'' as shown in picture \ref{fig_additionalInfo}.
 \begin{figure}[H]
 	\centerline{\includegraphics[width=\textwidth]{img/additionalInfo}}
-	\caption{After selecting "Deep Learning VM"}
+	\caption{After Selecting ''Deep Learning VM''}
 	\label{fig_additionalInfo}
+\end{figure}
+You will be presented with the final configuration screen as shown in picture \ref*{fig_finalConfig} . We need to configure the following options:
+\begin{itemize}
+	\item Choose a name for your virtual machine
+	\item Choose any number of CPU/GPU you want to use (1 CPU is enough)
+	\item Choose TensorFlow 1.13 as framework
+	\item Activate: ''Install NVIDIA GPU Driver automatically on first startup?''
+	\item Activate: ''Enable access to JupyterLab via URL instead of SSH.''
+	\item Choose a proper size for the boot disk (minimum of 30 GB is enough)
+\end{itemize}
+\begin{figure}
+	\centerline{\includegraphics[scale=0.92]{img/finalConfig}}
+	\caption{Final Configuration Screen}
+	\label{fig_finalConfig}
 \end{figure}
 \subsubsection{Installing Additional Software}
 After we successfully created our first virtual machine instance, we need to install some additional software on the virtual machine. This is possible through an administrator console, which can be opened by clicking the ''SSH'' button in the ''virtual machine instances'' sub-menu, as shown in picture \ref{fig_adminConsole}. The open console can be seen in picture \ref{fig_adminConsole2}.\\
@@ -56,8 +72,13 @@ After we successfully created our first virtual machine instance, we need to ins
 	\caption{The administrator console}
 	\label{fig_adminConsole2}
 \end{figure}
-
-
-\subsection{}
-
+We need to execute the following commands:
+\begin{itemize}
+	\item \lstinline|sudo apt-get install python-opengl|
+	\item \lstinline|sudo apt-get install xvfb|
+\end{itemize}
+This will install both python-opengl and xvfb with root rights on our server. We need to allow the installation by entering ''y''.  As the Google Cloud server does not provide a display or Open-Gl graphics drivers, we need these programs to run OpenAiGym with visible training/evaluation.\\
+After the installation we can finally use Jupyter Lab.
+\subsection{Jupyter Lab}
+\subsubsection{Upload Notebooks}
 \end{document}

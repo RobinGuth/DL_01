@@ -15,12 +15,13 @@
 \tableofcontents
 
 \section{Introduction}
-Deep Reinforcement Learning (also called RL) is a huge step towards the creation of an universal artificial intelligence.\\ %TODO ADD SOME SPICE
-This guide will lead the reader through the setup process for the beginner tutorial "Deep Reinforcement Learning". It is also possible to use this as a base for different 
+Deep Reinforcement Learning (also called RL) is a huge step towards the creation of an universal artificial intelligence. In 2013 a company, owned by Google called ''Deep Mind'', was able to create an astonishing implementation of RL, which was capable to play retro games of the console ''Atari 2600''. In many cases the AI \footnote{Artificial Intelligence} was not only able to play the games successfully, but also exceeded human performances significantly \cite{atari}.\\
+As a fairly new topic, beginners often struggle to find a good starting point into the world of AI and specifically RL. Many tutorials are written for more advanced users, who already know basics of machine learning. The ''Deep Reinforcement Learning Tutorial" will provide an easy-to-follow, hands-on beginners guide to RL. After the completion, we will be able to write our own algorithm to play some basic games for us.\\
+This installation guide will lead the reader through the setup process for the tutorial. It is also possible to use this as a base for different Machine Learning base, as we will install many standard utilities.
 \paragraph{Prerequisites}
-It is recommended that a reader already acquired some basic knowledge about programming with Python and is familiar with basic deep learning concepts like Un-/Supervised Learning or at least with basic concept of AI \footnote{Artificial Intelligence}. It is also useful to be able to perform some basic linux commands, as we will use them later to install some additional packages.
+It is recommended that the reader already acquired some basic knowledge about programming with Python and is familiar with basic deep learning concepts like Un-/Supervised Learning or at least with basic concept of AI. It is also useful to be able to perform some basic Linux commands, as we will use them later to install some additional packages.
 \paragraph{Outlook}
-The user will get to know basic concepts of RL with the help of:
+The user will get to know basic concepts of RL with the help of the following programs/utilities/libraries:
 \begin{description}
 	\item[Python3] One of the most popular programming languages for deep learning. The following tutorials will be based on Python. See \url{https://www.python.org/} for more information.
 	\item[Pip] A package installer for Python, which will download and install packages for us from a repository.
@@ -31,8 +32,8 @@ The user will get to know basic concepts of RL with the help of:
 \end{description}  
 \section{Installation}
 \subsection{Google Cloud}
-As "Reinforcement Learning" is pretty resource-intensiv, Google Cloud will deliver the required performance in the cloud. Python itself, all libraries required and Jupyter Lab need to be available. Luckily, Google already provides a template for a Linux Virtual Machine, which we can use as base for this tutorial. You will have to create a Google account to use the cloud.\\
-It is also possible to use this tutorial locally. You will have to prepare a Jupyter Lab environment with the help of PIP or Anaconda. Both are package installers for Python. See this tutorial \url{https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html} for more information.
+As "Reinforcement Learning" is pretty resource-intensive, Google Cloud will deliver the required performance in the cloud. Python itself, all libraries required and Jupyter Lab need to be available. Luckily, Google already provides a template for a Linux Virtual Machine, which we can use as base for this tutorial. You will have to create a Google account to use the cloud.\\
+It is also possible to use this tutorial locally. You will have to prepare a Jupyter Lab environment with the help of PIP or Anaconda and install all required libraries manually. Both are package installers for Python. Check this tutorial \url{https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html} for more information.
 \subsubsection{Deep Learning VM}
 To get started in the most simple way, we will use the Google "Deep Learning VM" template to create our environment. It can be found at \url{https://cloud.google.com/deep-learning-vm} or alternatively you can search for "Deep Learning VM" in the Google Cloud marketplace, as shown in picture \ref{fig_marketplaceSearch}.
 \begin{figure}[H]
@@ -60,6 +61,13 @@ You will be presented with the final configuration screen as shown in picture \r
 	\caption{Final Configuration Screen}
 	\label{fig_finalConfig}
 \end{figure}
+\paragraph{Starting the VM}
+The VM will start automatically after creating it. It can also be started  manually by selecting it in the vm instances menu and pressing the start button, as shown in picture \ref{fig_startVM}.
+\begin{figure}[H]
+	\centerline{\includegraphics[width=\textwidth]{img/startVM}}
+	\caption{Starting the VM}
+	\label{fig_startVM}
+\end{figure}
 \subsubsection{Installing Additional Software}
 After we successfully created our first virtual machine instance, we need to install some additional software on the virtual machine. This is possible through an administrator console, which can be opened by clicking the ''SSH'' button in the ''virtual machine instances'' sub-menu, as shown in picture \ref{fig_adminConsole}. The open console can be seen in picture \ref{fig_adminConsole2}.\\
 \begin{figure}[H]
@@ -77,8 +85,20 @@ We need to execute the following commands:
 	\item \lstinline|sudo apt-get install python-opengl|
 	\item \lstinline|sudo apt-get install xvfb|
 \end{itemize}
-This will install both python-opengl and xvfb with root rights on our server. We need to allow the installation by entering ''y''.  As the Google Cloud server does not provide a display or Open-Gl graphics drivers, we need these programs to run OpenAiGym with visible training/evaluation.\\
+This will install both python-opengl and xvfb with root rights on our server. We may need to allow the installation by entering ''y'', if the console requests it.  As the Google Cloud server does not provide a display or Open-Gl graphics drivers, we need these programs to run OpenAiGym with visible training/evaluation.\\
 After the installation we can finally use Jupyter Lab.
 \subsection{Jupyter Lab}
+We can connect to Jupyter Lab through the external address that is displayed in the vm instances menu and the port 8080 as shown in picture \ref{fig_startVM}. The address can be entered into a web browser as follows: \lstinline|<external-address>:8080|.
 \subsubsection{Upload Notebooks}
+After connecting to Jupyter Lab you will be presented with the main menu of Jupyter Lab as shown in picture \ref{fig_mainMenu}. We can now upload the supplied "Deep Reinforcement Learning" notebooks either by using the upload button in the left upper corner or drag/drop to files into the filebrowser. The notebooks can now be opened and used.
+\begin{figure}[H]
+	\centerline{\includegraphics[width=\textwidth]{img/jupyterLab}}
+	\caption{Main Menu}
+	\label{fig_mainMenu}
+\end{figure}
+\section{Conclusion}
+We have now successfully set up the Google Cloud VM and fetched all dependencies that need to be installed manually. All other libraries will be automatically downloaded while using the notebooks. We can now continue with the first notebook.
+
+\bibliography{bib} 
+\bibliographystyle{ieeetr}
 \end{document}

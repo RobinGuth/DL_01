@@ -1,0 +1,14 @@
+Poster:
+	Notebooks als Produkt -> Fokus: Notebooks
+	Motivation + ans Thema heranführen
+	Welche Technologien wurden genutzt?
+	Artefakte + Zusammenhang + Kritik
+
+Doku:
+	Welches Ziel wurde wie umgesetzt?
+	Welche möglichen Verbesserungen gibt es? / Was könnte man anders machen?
+	
+	Nach den vier Punkten strukturieren, wie Poster. (nicht sicher, ob ich das so richtig verstandne hab)
+	
+
+Installationsguide für Abgabe + Latexversion

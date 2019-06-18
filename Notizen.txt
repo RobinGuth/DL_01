@@ -8,7 +8,7 @@ Doku:
 	Welches Ziel wurde wie umgesetzt?
 	Welche möglichen Verbesserungen gibt es? / Was könnte man anders machen?
 	
-	Nach den vier Punkten strukturieren, wie Poster. (nicht sicher, ob ich das so richtig verstandne hab)
+	Nach den vier Punkten strukturieren, wie Poster. (nicht sicher, ob ich das so richtig verstanden habe) (ja hast du :D die 4 Punkte sind sogar primär für die Doku :P)
 	
 
 Installationsguide für Abgabe + Latexversion

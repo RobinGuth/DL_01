@@ -16,8 +16,15 @@ motivation
 	
 	\subsubsection{The concept of RL}
 		Our agent is contained by an environment. A momentary snapshot of the environment is called state. A state contains all information at a certain point in time for example the position of the agent or enemies. There is a permanent exchange of information between the agent and its environment. The agent receives the actual state and has to choose an action based on its logic. Everything the agent can use to alter its environment is called an action. It changes the environment based on a certain set of rules. After executing an action the agents receives the new state and a reward, which helps to decide whether its decision leads to a positive result. Keep in mind, that a reward can also be negative. The main goal for the agent is to learn the best action for each state, so that it can maximize the reward. Basically, an environment is just a set of states. We can move between states by executing actions. A good example for an environment is our own world. We are agents, moving in the world. All the time we have to look at our surroundings and choose an action like moving accross the street or waiting until it is free. The laws of physics restrain us, take gravity for example. We receive rewards like geting hurt oder feeling satisfied, thats how we evalute our actions. Our environment is constantly changing, so we have to reevalute our decisions and choose an action again. The following picture shows the whole procedure:\\ 
-% Bild einfügen
-		
+
+		\begin{figure}[h!]
+			\begin{center}
+				\includegraphics[width=0.6\linewidth]{img/eoeSq.png}
+				\caption{Concept of Reinforcement Learning}
+				\label{concept}
+			\end{center}
+		\end{figure}
+
 	\subsubsection{Deep Learning Aspect}
 		The agent has to recognize and differentiate elements in the environment, to be able to act accordingly and choose a proper action. In the best case, we already have the input reduced into some important numbers, which describe the actual state. In real applications this may not be possible or feasible with our knowledge. Most of the time we will have a picture available for example the image of a camera or a game screen, but the input we receive can basically be any sensory data.\\
 		
@@ -30,7 +37,13 @@ motivation
 	
 		Following is an exemplary presentation of a neural network, which is designed according to the tasks just mentioned.
 		
-% Bild einfügen
+		\begin{figure}[h!]
+			\begin{center}
+				\includegraphics[width=\linewidth]{img/v2-67ef75bb7f5e67b2a42645aa821894bf_hd.png}
+				\caption{Concept of Reinforcement Learning}
+				\label{concept}
+			\end{center}
+		\end{figure}
 
 		There are two ways to learn in deep reinforcement learning. Eiher we can use Value Learning or Policy Learning. With Value Learning, we assign values to each state-action pair, which correspond to the probabilities of the pair beeing the best option. In Policy Learning, we will learn a strategy instead, which gives as the best estimated action for a given state s. We will focus at Value Learning. 
 			
@@ -41,8 +54,9 @@ motivation
 		
 
 \subsection{The OpenAi Gym Framework}
-	
+	OpenAi Gym is the Framework we chose to provide an game environment. Developing Machine Learning algorithms is often neither easy to understand nor comprehensible especially for beginners. In order to counteract this, we chose a simple and completly observable environment, in form of a game. OpenAi Gym is open source, so we use it immediately and don't need to spend time or resources to build our own environment. Furthermore the framework provides all environmental data an DRL agent needs and using an existing game is also easier to compare to human performance and therefore the evaluation of different algorithms is easier. 
 
 \subsection{The Exercises}
-	
+	The exercises are a comparatively small part of the notebooks. Our main goal is to understand Deep Reinforcement Learning. The places where we want to be active, are designed so that we can translate the theory directly into code, just like that. All other code passages are explained in detail, so that the project can be comprehended in its entirety. The goal of the exercises is to build and understand a basic structure for a DRL agent. The individual tasks are located at the points in the code where the agent can be further optimized and customized to create an entry point into a project.
+	   
 	

@@ -7,13 +7,13 @@
 
 \subsection{Software Agent}
 	Before the topic of RL can be explained, some basics need to be addressed in order to clarify the following explanation.
-	For this, the term of \textit{software agent} is introduced, which, as part of artificial intelligence, is basically a program, that acts self sufficient to solve a task.
-	There are three important aspects an agent should fulfil. 
+	For this, the term of \textit{software agent} is introduced, which, as part of artificial intelligence, is basically a program, that acts self-sufficient to solve a task.
+	There are three important aspects an agent should fulfill. 
 	First is autonomous action, which means that an agent needs to make decisions without external help.
 	Further an agent needs to execute multiple actions to complete its task. 
 	This property is called proactive.
 	Last but not least, an agent has to be reactive, which means it reacts on changes in the environment it is in.
-	An optional ability, for an agent like this, is self sufficient improvement. For this the agent builds up knowledge after repetitively doing its task and improves itself this way.\\
+	An optional ability, for an agent like this, is self-sufficient improvement. For this the agent builds up knowledge after repetitively doing its task and improves itself this way.\\
 	Basically, the part of the agent, which controls its actions, can be filled with different algorithms. In this case, this will be an implementation of RL, which fits all requirements of an agent.
 
 \subsection{Reinforcement Learning}
@@ -26,7 +26,7 @@
 	It still has to explore the environment, because otherwise it can not be sure if it actually finds the global maximum or is just stuck at a local one and if there might be a better chain of actions.
 	If this is compared to the real world, this method of learning is pretty close the human learning. 
 	If a person gets hurt for example, the person is more likely to try to avoid the situation in the future.
-	Still curiosity or necessity leads humans to exploring and thus maybe getting them into danger, but in the best case, will lead them to some kind of positive reward, like food for example.\\
+	Still curiosity or necessity leads humans to exploring and thus maybe getting them into danger, but in the best case, will lead them to some kind of positive reward, like food for example.
 	
 	\subsubsection{The Concept of RL}
 		An agent is contained by an environment.
@@ -43,9 +43,9 @@
 		A good example for an environment is the universe.
 		Humans and other living beings are agents, moving in the world.
 		All the time they have to look at their surroundings and choose an action like moving across the street or waiting until it is free.
-		The laws of physics restrains them, take gravity for example.
+		The laws of physics restrain them, take gravity for example.
 		All living things receive rewards like getting hurt or feeling satisfied, that is how they evaluate the actions.
-		The environment is constantly changing, so they have to revaluate their decisions and choose an action again. 
+		The environment is constantly changing, so they have to reevaluate their decisions and choose an action again. 
 		The following picture shows the whole procedure:\\ 
 
 		\begin{figure}[h!]
@@ -63,7 +63,7 @@
 		Most of the time there is a picture available, for example the image of a camera or a game screen, but the input the agent receives can basically be any sensory data.\\
 		Furthermore the agent must associate the occurrence of individual elements on screen with its own actions and the subsequent reward or penalty, which may occur only after several steps in the future.
 		Depending on the situation it may be also necessary to estimate what the next state of the game could be.
-		There are two possible ways to use the \textit{deep learning} aspect.\\	
+		There are two possible ways to use the \textit{deep learning} aspect.
 		\begin{enumerate}
 			\item Image processing with a CNN\footnote{Convolutional Neural Network}, in order to process the image information and send this to the agent.
 			\item A DQN\footnote{Deep Q-Learning Network}, in order to model the Q-function, which is discussed below.
@@ -77,16 +77,16 @@
 			\end{center}
 		\end{figure}\\
 		There are two ways to learn in deep reinforcement learning.
-		 Either the agent can use Value Learning or Policy Learning.
-		 With Value Learning, it assigns values to each state-action pair, which correspond to the probabilities of the pair being the best option.
-		 In Policy Learning, it will learn a strategy instead, which gives it directly the best estimated action for a given state s. 
-		 In the notebook, the focus will be on Value Learning. 
+		Either the agent can use Value Learning or Policy Learning.
+		With Value Learning, it assigns values to each state-action pair, which correspond to the probabilities of the pair being the best option.
+		In Policy Learning, it will learn a strategy instead, which gives it directly the best estimated action for a given state s. 
+		In the notebook, the focus will be on Value Learning. 
 			
 	\subsubsection{Q-Learning}
 		The task of the agent is the maximization of a cumulative future reward.
 		An example of this can be the score in a game.
 		In an environment, there is no guarantee for an immediate reward after executing an action.
-		In many cases, only specific chains of actions lead to a positive reward, so the agent needs to learn multiple moves in succession in order to fulfil the given task.
+		In many cases, only specific chains of actions lead to a positive reward, so the agent needs to learn multiple moves in succession in order to fulfill the given task.
 		For example, if the agent needs to collect an object in order to get a higher score, it may be necessary to take multiple moves to reach it.
 		The moves in between may not increase the reward significantly or even reduce it, however they are needed to complete the task in order to be successful.
 		So the agent may have to learn to sacrifice some rewards, to earn an overall higher reward in the end.
@@ -103,7 +103,7 @@
 		The Q-function is the name giving aspect of a Deep Q-Learning Network, while the "Q" stands for "Quality".
 		The higher the reward, the higher the estimated Q-value and associated quality.
 		That means this function calculates a Q-value for the actual state, which represents the best action to take.
-		Therefore taking the highest Q-value associated with the biggest estimated future total \textit{reward} $Q(s', a')$, the last gained reward and a discount factor into account is needed, in order to make rewards in the near future more decisive for the agent.
+		Therefore taking the highest Q-value associated with the biggest estimated future total reward $Q(s', a')$, the last gained reward $r_t$ and a discount factor $\gamma$ into account is needed, in order to make rewards in the near future more decisive for the agent.
 		The main formula to model such a behaviour is the so called \textit{Bellman equation}.
 		
 		\begin{figure}[h!]

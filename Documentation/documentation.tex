@@ -38,10 +38,43 @@
 	%Section: Content//Deep Reinforcement Learning
 	\input{deepreinforcementlearning.tex}
 
+	\section{Initial Targets}
+		As the reader is now familiar with the topic of RL, in this section, the initial targets will be discussed. Later on, these targets are critically compared to the results. Some of the presented targets may overlap.
+		
+		\begin{description}
+			\item[Beginner-Friendly] 	The main goal in the creation of this tutorial is to create an easy understandable, hands-on beginners guide to RL.
+			This means that there need to be extra steps to reach this target like:
+			\begin{itemize}
+				\item extensive, comprehensive explanations
+				\item explanations for new terms
+				\item accompanying images/visualizations
+				\item easy language
+				\item explained code examples
+				\item simple exercises with solutions
+				\item inviting environment 
+				\item no big obstacles without support
+				\item easy to set up
+				\item etc.
+			\end{itemize}
+		
+			\item[Relevant Knowledge] After the completion of the tutorial, the user should be able to proceed with other tutorials or sources, without needing to start over again. The knowledge presented should contain necessary and useful basics of RL.
+			
+			\item[Easy Code] As the programming language \textit{Python} dominates fields like \textit{data science} or \textit{machine learning}, was made with the intention of creating a very simple programming language and many libraries being written in \textit{Python}, this seems an excellent choice for this tutorial.\\ 
+			
+			\item[Combination of text and code] Many tutorials in existence require the installation of additional software, like compilers for the programming language. This separates the code from the theory and explanations. For this reason, the code and text should be in the some document, so that a reader can instantly try to run code while reading the explanations. 
+			
+			\item[Performance] An important point to consider is the required computing power to train an agent. As many thousands to millions of steps are needed, this is more than most personal computers can handle in a decent amount of time.  
+			For this reason, the tutorial should be based on the usage of a cloud service to execute code. 
+			This delivers enough computation power to train an agent in a short period of time, as well as separating the execution environment from the users personal hardware, which removes the need to install software on the users pc.
+		\end{description}
+
 	\section{Methods and Materials}
-	
+		In this section, the methods and materials used in the creation of the notebooks are presented, as well as the thought process of the authors. Problems, which occurred are discussed and some solutions are offered.
+		
+		
 	keras etc
 	jupyter lab
+	We-form
 	open ai gym: 
 		As we discussed before, Reinforcement Learning can be used to solve a range of different problems. Developing Machine Learning algorithms is often not easy to understand nor comprehensible especially for beginners. Furthermore, it is important to be able to compare the performance of different iterations of our algorithm, to be able to improve it.
 		
@@ -56,6 +89,12 @@
 		
 		In practice, not all of these points will be fulfilled, but as this is a beginners guide, we will start with a simple environment. Luckily, many video games can be used as quite good environments for machine learning purposes. Many implementations of RL are tested with games as Benchmark and there are some good reasons for this. Developing a whole test environment would be labour intensive and would require dedicated work towards a useable simulator. Using an existing game is also easier to compare to human performance and therefore the evaluation of different algorithms is easier. Another important point is the size of possible inputs and actions. The AI replaces the human player. Depending on the game, the input for our agent is an image, like a human player would see it. The set of actions is a combination of different buttons, which can be pressed on a controller. Finally, games are fun and most people can relate to them. It is also easier to understand what we want to accomplish, because we can transfer aspects from our human play style to the behaviour of an AI. 
 
+		\subsection{The OpenAi Gym Framework}
+		OpenAi Gym is the Framework that is used to provide a game environment. Developing \textit{machine learning} algorithms is often neither easy to understand nor comprehensible especially for beginners. As most people are familiar with videogames, a game was chosen as a simple and completely observable environment. OpenAi Gym is an open source framework, which delivers a range of different game environment. It provides all environmental data an RL agent needs and using an existing game makes it also easier to compare the agent to human performance and also other agents and therefore the evaluation of different algorithms is easier.
+		Another advantage is, that a developer does not need to build a dedicated testing environment and save time.
+		
+		\subsection{The Exercises}
+		The exercises are a comparatively small part of the notebooks. The main goal is to explain \textit{deep reinforcement learning}. The notebooks were designed to be easily understandable with a good connection between theory and implementation. All code passages are explained in detail, so that the project can be comprehended in its entirety. The goal of the exercises is to build and understand a basic structure for a RL agent. The individual tasks are located at the points in the code where the agent can be further optimized and customized to create an entry point into a project.
 	
 	\section{Results}
 	critic/ expensions:
@@ -63,34 +102,34 @@
 		policy learning / value learning -> both variants as cartpole agent
 		policy gradient
 	
-	Alles für Verwendung in Cloud
+	Alles fuer Verwendung in Cloud
 	
 	Einstiegshilfe: 
-		- alles erklärt
+		- alles erklaert
 		- Einfacheres Codebeispiel
-		- Grundgerüst (Code) und Grundlagenwissen für weitere Projekte
+		- Grundgeruest (Code) und Grundlagenwissen fuer weitere Projekte
 	
 	zwei notebooks:
 		1. Theorie: 
-			- Agenten erläutert
+			- Agenten erlaeutert
 			- RL allgemein und am Bsp Spiel	
 			- Deep Learning Aspect
 			- Q-Learning mit Herleitung Formeln
-			- Modelliermöglichkeiten für DQN
+			- Modelliermoeglichkeiten fuer DQN
 			- Outlook
 		2. Beispiel Code:
 			- Theorie umgesetzt
 			- Framework vorgestellt
 			- anhand von Spiel -> Beispiel
 			- rendern 
-			- alles genau erklärt -> Einsteigerfreundlich
+			- alles genau erklaert -> Einsteigerfreundlich
 			- DQN Agent erstellen, trainieren
-			- Übungen
+			- Uebungen
 			- Outlook, Verbesserungen etc.
 			
 	Installationsguide
 	
-	Weiterführende Quellen
+	Weiterfuehrende Quellen
 	
 	\bibliography{bib} 
 	\bibliographystyle{ieeetr}
